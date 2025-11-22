@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+	"has_crystallized_honey_bricks": {
+	  "conditions": { "items": [ { "items": "wich:crystallized_honey_bricks" } ] },
+	  "trigger": "minecraft:inventory_changed"
+	},
+	"has_the_recipe": {
+	  "conditions": { "recipe": "wich:crystallized_honey_brick_stairs_from_crystallized_honey_bricks_stonecutting" },
+	  "trigger": "minecraft:recipe_unlocked"
+	}
+  },
+  "requirements": [
+	[ "has_the_recipe", "has_crystallized_honey_bricks" ]
+  ],
+  "rewards": { "recipes": [ "wich:crystallized_honey_brick_stairs_from_crystallized_honey_bricks_stonecutting" ] }
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+	{ "id": "wich:crystallized_honey_brick_slab", "required": false },
+	{ "id": "wich:crystallized_honey_brick_stairs", "required": false },
+	{ "id": "wich:crystallized_honey_brick_wall", "required": false }
+  ]
+}

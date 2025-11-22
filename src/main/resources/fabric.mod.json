@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "wich_honey-slimes",
+	"version": "${version}",
+	"name": "Honey Slimes",
+	"description": "Adds a new Honey Slime mob and crystallized honey.",
+	"authors": [ "dovewich" ],
+	"contact": {
+		"homepage": "https://www.wich.fun/",
+		"sources": "https://github.com/OfficePigeon/Honey-Slime-Mod"
+	},
+	"license": "",
+	"icon": "assets/wich/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [ "fun.wich.HoneySlimesMod" ],
+		"client": [ "fun.wich.client.HoneySlimesClient" ]
+	},
+	"mixins": [
+		"wich.honeyslimes.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": ">=1.21.9",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

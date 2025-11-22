@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "wich:crystallized_honey_bricks",
+  "result": {
+	"count": 1,
+	"id": "wich:crystallized_honey_brick_stairs"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+	"wich:crystallized_honey_block"
+  ],
+  "result": {
+	"count": 9,
+	"id": "wich:crystallized_honey"
+  }
+}

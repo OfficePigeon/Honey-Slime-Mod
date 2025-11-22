@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+	"#": "wich:crystallized_honey_brick_slab"
+  },
+  "pattern": [
+	"#",
+	"#"
+  ],
+  "result": {
+	"count": 1,
+	"id": "wich:chiseled_crystallized_honey_bricks"
+  }
+}

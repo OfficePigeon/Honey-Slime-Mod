@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+	"has_crystallized_honey": {
+	  "conditions": { "items": [ { "items": "wich:crystallized_honey" } ] },
+	  "trigger": "minecraft:inventory_changed"
+	},
+	"has_the_recipe": {
+	  "conditions": { "recipe": "wich:crystallized_honey_brick" },
+	  "trigger": "minecraft:recipe_unlocked"
+	}
+  },
+  "requirements": [ [ "has_the_recipe", "has_crystallized_honey" ] ],
+  "rewards": { "recipes": [ "wich:crystallized_honey_brick" ] }
+}

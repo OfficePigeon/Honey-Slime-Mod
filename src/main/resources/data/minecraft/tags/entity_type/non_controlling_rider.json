@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+	{ "id": "wich:honey_slime", "required": false }
+  ]
+}

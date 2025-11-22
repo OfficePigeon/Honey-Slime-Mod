@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+	{ "id": "wich:crystallized_honey_brick_wall", "required": false }
+  ]
+}

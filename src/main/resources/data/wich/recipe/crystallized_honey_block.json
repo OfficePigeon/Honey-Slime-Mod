@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+	"#": "wich:crystallized_honey"
+  },
+  "pattern": [
+	"###",
+	"###",
+	"###"
+  ],
+  "result": {
+	"count": 1,
+	"id": "wich:crystallized_honey_block"
+  }
+}

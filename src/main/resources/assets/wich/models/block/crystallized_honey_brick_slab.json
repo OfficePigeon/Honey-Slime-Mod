@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+	"bottom": "wich:block/crystallized_honey_bricks",
+	"side": "wich:block/crystallized_honey_bricks",
+	"top": "wich:block/crystallized_honey_bricks"
+  }
+}

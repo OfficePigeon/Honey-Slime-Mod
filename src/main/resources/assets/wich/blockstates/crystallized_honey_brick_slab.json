@@ -1,0 +1,13 @@
+{
+  "variants": {
+	"type=bottom": {
+	  "model": "wich:block/crystallized_honey_brick_slab"
+	},
+	"type=double": {
+	  "model": "wich:block/crystallized_honey_bricks"
+	},
+	"type=top": {
+	  "model": "wich:block/crystallized_honey_brick_slab_top"
+	}
+  }
+}

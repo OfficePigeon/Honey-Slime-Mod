@@ -1,0 +1,22 @@
+{
+  "entity.wich.honey_slime": "Cube o' bee slime",
+  "item.wich.honey_slime_spawn_egg": "Cube o' bee slime cackle fruit",
+  
+  "item.wich.crystallized_honey": "Hardened bee nectar",
+  "item.wich.crystallized_honey_block": "Cube o' hardened bee nectar",
+  "block.wich.crystallized_honey_block": "Cube o' hardened bee nectar",
+  "item.wich.crystallized_honey_brick": "Hardened bee nectar brick",
+  "block.wich.crystallized_honey_brick": "Hardened bee nectar brick",
+  "item.wich.crystallized_honey_bricks": "Cube o' hardened bee nectar bricks",
+  "block.wich.crystallized_honey_bricks": "Cube o' hardened bee nectar bricks",
+  "item.wich.crystallized_honey_brick_stairs": "Stairs o' hardened bee nectar bricks",
+  "block.wich.crystallized_honey_brick_stairs": "Stairs o' hardened bee nectar bricks",
+  "item.wich.crystallized_honey_brick_slab": "Slab o' hardened bee nectar bricks",
+  "block.wich.crystallized_honey_brick_slab": "Slab o' hardened bee nectar bricks",
+  "item.wich.crystallized_honey_brick_wall": "Wall o' hardened bee nectar bricks",
+  "block.wich.crystallized_honey_brick_wall": "Wall o' hardened bee nectar bricks",
+  "item.wich.chiseled_crystallized_honey_bricks": "Cube o' carv'd bee nectar bricks",
+  "block.wich.chiseled_crystallized_honey_bricks": "Cube o' carv'd bee nectar bricks",
+  
+  "subtitles.entity.parrot.imitate.honey_slime": "Yer' best matey be squishin'"
+}
