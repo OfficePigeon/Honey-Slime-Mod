@@ -7,11 +7,11 @@
 	  "entries": [
 		{
 		  "type": "minecraft:item",
-		  "name": "wich:crystallized_honey_block"
+		  "name": "wich:honey_clump_block"
 		}
 	  ],
 	  "rolls": 1.0
 	}
   ],
-  "random_sequence": "wich:blocks/crystallized_honey_block"
+  "random_sequence": "wich:blocks/honey_clump_block"
 }

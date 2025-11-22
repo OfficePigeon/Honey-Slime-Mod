@@ -18,7 +18,7 @@ import net.minecraft.util.math.random.Random;
 public class HoneySlimesClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-		ParticleFactoryRegistry.getInstance().register(HoneySlimesMod.PARTICLE_ITEM_HONEY, ModCrackParticle.MakeCrackParticle(new ItemStack(HoneySlimesMod.CRYSTALLIZED_HONEY)));
+		ParticleFactoryRegistry.getInstance().register(HoneySlimesMod.PARTICLE_ITEM_HONEY, ModCrackParticle.MakeCrackParticle(new ItemStack(HoneySlimesMod.HONEY_CLUMP)));
 		EntityRendererFactories.register(HoneySlimesMod.HONEY_SLIME, HoneySlimeEntityRenderer::new);
 	}
 	private static class ModCrackParticle extends CrackParticle {

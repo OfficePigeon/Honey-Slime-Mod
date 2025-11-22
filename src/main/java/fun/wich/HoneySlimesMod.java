@@ -54,7 +54,7 @@ public class HoneySlimesMod implements ModInitializer {
 		Registry.register(Registries.ENTITY_TYPE, key, entityType);
 		return entityType;
 	}
-	public static final Block CRYSTALLIZED_HONEY_BLOCK = register("crystallized_honey_block", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN).instrument(NoteBlockInstrument.BASEDRUM));
+	public static final Block HONEY_CLUMP_BLOCK = register("honey_clump_block", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN).instrument(NoteBlockInstrument.BASEDRUM));
 	public static final Block CRYSTALLIZED_HONEY_BRICKS = register("crystallized_honey_bricks", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN_BRICKS).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5f, 6));
 	public static final Block CRYSTALLIZED_HONEY_BRICK_STAIRS = register("crystallized_honey_brick_stairs", settings -> new StairsBlock(CRYSTALLIZED_HONEY_BRICKS.getDefaultState(), settings), Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static final Block CRYSTALLIZED_HONEY_BRICK_SLAB = register("crystallized_honey_brick_slab", SlabBlock::new, Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
@@ -67,9 +67,9 @@ public class HoneySlimesMod implements ModInitializer {
 		return block;
 	}
 	public static final Item HONEY_SLIME_SPAWN_EGG = register("honey_slime_spawn_egg", SpawnEggItem::new, new Item.Settings().spawnEgg(HONEY_SLIME));
-	public static final Item CRYSTALLIZED_HONEY = register("crystallized_honey", Item::new, new Item.Settings());
+	public static final Item HONEY_CLUMP = register("honey_clump", Item::new, new Item.Settings());
+	public static final Item HONEY_CLUMP_BLOCK_ITEM = register("honey_clump_block", settings -> new BlockItem(HONEY_CLUMP_BLOCK, settings), new Item.Settings());
 	public static final Item CRYSTALLIZED_HONEY_BRICK = register("crystallized_honey_brick", Item::new, new Item.Settings());
-	public static final Item CRYSTALLIZED_HONEY_BLOCK_ITEM = register("crystallized_honey_block", settings -> new BlockItem(CRYSTALLIZED_HONEY_BLOCK, settings), new Item.Settings());
 	public static final Item CRYSTALLIZED_HONEY_BRICKS_ITEM = register("crystallized_honey_bricks", settings -> new BlockItem(CRYSTALLIZED_HONEY_BRICKS, settings), new Item.Settings());
 	public static final Item CRYSTALLIZED_HONEY_BRICK_STAIRS_ITEM = register("crystallized_honey_brick_stairs", settings -> new BlockItem(CRYSTALLIZED_HONEY_BRICK_STAIRS, settings), new Item.Settings());
 	public static final Item CRYSTALLIZED_HONEY_BRICK_SLAB_ITEM = register("crystallized_honey_brick_slab", settings -> new BlockItem(CRYSTALLIZED_HONEY_BRICK_SLAB, settings), new Item.Settings());
@@ -93,9 +93,9 @@ public class HoneySlimesMod implements ModInitializer {
 		//Items
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(itemGroup -> itemGroup.add(HONEY_SLIME_SPAWN_EGG));
 		//Crystallized Honey
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> itemGroup.add(HONEY_CLUMP));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(itemGroup -> itemGroup.add(HONEY_CLUMP_BLOCK_ITEM));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY_BRICK));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY_BLOCK_ITEM));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY_BRICKS_ITEM));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY_BRICK_STAIRS_ITEM));
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(itemGroup -> itemGroup.add(CRYSTALLIZED_HONEY_BRICK_SLAB_ITEM));

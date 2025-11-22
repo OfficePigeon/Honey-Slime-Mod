@@ -1,8 +1,16 @@
 {
-  "type": "minecraft:smelting",
-  "category": "misc",
-  "cookingtime": 200,
-  "experience": 0.1,
-  "ingredient": "wich:crystallized_honey_block",
-  "result": { "id": "minecraft:honey_block" }
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+	"#": "wich:crystallized_honey_brick"
+  },
+  "pattern": [
+	"###",
+	"###",
+	"###"
+  ],
+  "result": {
+	"count": 1,
+	"id": "wich:crystallized_honey_bricks"
+  }
 }

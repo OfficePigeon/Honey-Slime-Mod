@@ -2,9 +2,9 @@
   "entity.wich.honey_slime": "Honey Slime",
   "item.wich.honey_slime_spawn_egg": "Honey Slime Spawn Egg",
   
-  "item.wich.crystallized_honey": "Crystallized Honey",
-  "item.wich.crystallized_honey_block": "Crystallized Honey Block",
-  "block.wich.crystallized_honey_block": "Crystallized Honey Block",
+  "item.wich.honey_clump": "Honey Clump",
+  "item.wich.honey_clump_block": "Honey Clump Block",
+  "block.wich.honey_clump_block": "Honey Clump Block",
   "item.wich.crystallized_honey_brick": "Crystallized Honey Brick",
   "block.wich.crystallized_honey_brick": "Crystallized Honey Brick",
   "item.wich.crystallized_honey_bricks": "Crystallized Honey Bricks",

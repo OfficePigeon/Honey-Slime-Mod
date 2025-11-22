@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+	"bottom": "wich:block/honey_clump_block_bottom",
+	"side": "wich:block/honey_clump_block_side",
+	"top": "wich:block/honey_clump_block_top"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "model": {
 	"type": "minecraft:model",
-	"model": "wich:item/crystallized_honey"
+	"model": "wich:item/honey_clump"
   }
 }

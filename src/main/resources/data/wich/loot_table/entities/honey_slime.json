@@ -34,7 +34,7 @@
 			  "function": "minecraft:enchanted_count_increase"
 			}
 		  ],
-		  "name": "wich:crystallized_honey"
+		  "name": "wich:honey_clump"
 		},
 		{
 		  "type": "minecraft:item",
@@ -45,7 +45,7 @@
 			}
 		  ],
 		  "functions": [ { "add": false, "count": 1.0, "function": "minecraft:set_count" } ],
-		  "name": "wich:crystallized_honey"
+		  "name": "wich:honey_clump"
 		}
 	  ],
 	  "rolls": 1.0

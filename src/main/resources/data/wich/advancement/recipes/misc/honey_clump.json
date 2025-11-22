@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+	"has_honey_clump_block": {
+	  "conditions": { "items": [ { "items": "wich:honey_clump_block" } ] },
+	  "trigger": "minecraft:inventory_changed"
+	},
+	"has_the_recipe": {
+	  "conditions": { "recipe": "wich:honey_clump" },
+	  "trigger": "minecraft:recipe_unlocked"
+	}
+  },
+  "requirements": [ [ "has_the_recipe", "has_honey_clump_block" ] ],
+  "rewards": { "recipes": [ "wich:honey_clump" ] }
+}

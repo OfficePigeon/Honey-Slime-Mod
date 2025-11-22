@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-	"#": "wich:crystallized_honey"
+	"#": "wich:honey_clump"
   },
   "pattern": [
 	"###",
@@ -11,6 +11,6 @@
   ],
   "result": {
 	"count": 1,
-	"id": "wich:crystallized_honey_block"
+	"id": "wich:honey_clump_block"
   }
 }

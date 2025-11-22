@@ -3,6 +3,6 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": "wich:crystallized_honey_block",
+  "ingredient": "wich:honey_clump_block",
   "result": { "id": "minecraft:honey_block" }
 }
