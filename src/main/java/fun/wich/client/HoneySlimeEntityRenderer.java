@@ -26,7 +26,8 @@ public class HoneySlimeEntityRenderer extends MobEntityRenderer<SlimeEntity, Sli
 		super(context, new SlimeEntityModel(context.getPart(EntityModelLayers.SLIME)), 0.25f);
 		this.addFeature(new OverlayFeatureRenderer(this, context.getEntityModels(), TEXTURE));
 	}
-	protected float getShadowRadius(SlimeEntityRenderState state) { return state.size * 0.25f; }
+	@Override protected float getShadowRadius(SlimeEntityRenderState state) { return state.size * 0.25f; }
+	@Override
 	protected void scale(SlimeEntityRenderState state, MatrixStack matrixStack) {
 		matrixStack.scale(0.999f, 0.999f, 0.999f);
 		matrixStack.translate(0., 0.001f, 0);
@@ -34,12 +35,13 @@ public class HoneySlimeEntityRenderer extends MobEntityRenderer<SlimeEntity, Sli
 		float i = 1 / ((state.stretch / (g * 0.5f + 1)) + 1);
 		matrixStack.scale(i * g, 1 / i * g, i * g);
 	}
-	public Identifier getTexture(SlimeEntityRenderState slimeEntityRenderState) { return TEXTURE; }
-	public SlimeEntityRenderState createRenderState() { return new SlimeEntityRenderState(); }
-	public void updateRenderState(SlimeEntity slimeEntity, SlimeEntityRenderState slimeEntityRenderState, float f) {
-		super.updateRenderState(slimeEntity, slimeEntityRenderState, f);
-		slimeEntityRenderState.stretch = MathHelper.lerp(f, slimeEntity.lastStretch, slimeEntity.stretch);
-		slimeEntityRenderState.size = slimeEntity.getSize();
+	@Override public Identifier getTexture(SlimeEntityRenderState state) { return TEXTURE; }
+	@Override public SlimeEntityRenderState createRenderState() { return new SlimeEntityRenderState(); }
+	@Override
+	public void updateRenderState(SlimeEntity slimeEntity, SlimeEntityRenderState state, float f) {
+		super.updateRenderState(slimeEntity, state, f);
+		state.stretch = MathHelper.lerp(f, slimeEntity.lastStretch, slimeEntity.stretch);
+		state.size = slimeEntity.getSize();
 	}
 	public static class OverlayFeatureRenderer extends FeatureRenderer<SlimeEntityRenderState, SlimeEntityModel> {
 		protected final SlimeEntityModel model;
@@ -49,13 +51,14 @@ public class HoneySlimeEntityRenderer extends MobEntityRenderer<SlimeEntity, Sli
 			this.model = new SlimeEntityModel(loader.getModelPart(EntityModelLayers.SLIME_OUTER));
 			this.texture = texture;
 		}
-		public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int i, SlimeEntityRenderState slimeEntityRenderState, float f, float g) {
-			boolean bl = slimeEntityRenderState.hasOutline() && slimeEntityRenderState.invisible;
-			if (!slimeEntityRenderState.invisible || bl) {
-				orderedRenderCommandQueue.getBatchingQueue(1).submitModel(this.model, slimeEntityRenderState, matrixStack,
-						bl ? RenderLayer.getOutline(this.texture) : RenderLayer.getEntityTranslucent(this.texture), i,
-						LivingEntityRenderer.getOverlay(slimeEntityRenderState, 0),
-						-1, null, slimeEntityRenderState.outlineColor, null);
+		@Override
+		public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int light, SlimeEntityRenderState state, float f, float g) {
+			boolean bl = state.hasOutline() && state.invisible;
+			if (!state.invisible || bl) {
+				orderedRenderCommandQueue.getBatchingQueue(1).submitModel(this.model, state, matrixStack,
+						bl ? RenderLayer.getOutline(this.texture) : RenderLayer.getEntityTranslucent(this.texture), light,
+						LivingEntityRenderer.getOverlay(state, 0),
+						-1, null, state.outlineColor, null);
 			}
 		}
 	}

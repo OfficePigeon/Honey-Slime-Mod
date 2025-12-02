@@ -50,9 +50,7 @@ public class HoneySlimesMod implements ModInitializer {
 	);
 	public static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> type) {
 		RegistryKey<EntityType<?>> key = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MOD_ID, name));
-		EntityType<T> entityType = type.build(key);
-		Registry.register(Registries.ENTITY_TYPE, key, entityType);
-		return entityType;
+		return Registry.register(Registries.ENTITY_TYPE, key, type.build(key));
 	}
 	public static final Block HONEY_CLUMP_BLOCK = register("honey_clump_block", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN).instrument(NoteBlockInstrument.BASEDRUM));
 	public static final Block CRYSTALLIZED_HONEY_BRICKS = register("crystallized_honey_bricks", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN_BRICKS).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5f, 6));
@@ -62,9 +60,7 @@ public class HoneySlimesMod implements ModInitializer {
 	public static final Block CHISELED_CRYSTALLIZED_HONEY_BRICKS = register("chiseled_crystallized_honey_bricks", Block::new, Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static Block register(String name, Function<Block.Settings, Block> blockFactory, Block.Settings settings) {
 		RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name));
-		Block block = blockFactory.apply(settings.registryKey(key));
-		Registry.register(Registries.BLOCK, key, block);
-		return block;
+		return Registry.register(Registries.BLOCK, key, blockFactory.apply(settings.registryKey(key)));
 	}
 	public static final Item HONEY_SLIME_SPAWN_EGG = register("honey_slime_spawn_egg", SpawnEggItem::new, new Item.Settings().spawnEgg(HONEY_SLIME));
 	public static final Item HONEY_CLUMP = register("honey_clump", Item::new, new Item.Settings());
@@ -77,9 +73,7 @@ public class HoneySlimesMod implements ModInitializer {
 	public static final Item CHISELED_CRYSTALLIZED_HONEY_BRICKS_ITEM = register("chiseled_crystallized_honey_bricks", settings -> new BlockItem(CHISELED_CRYSTALLIZED_HONEY_BRICKS, settings), new Item.Settings());
 	public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
 		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
-		Item item = itemFactory.apply(settings.registryKey(key));
-		Registry.register(Registries.ITEM, key, item);
-		return item;
+		return Registry.register(Registries.ITEM, key, itemFactory.apply(settings.registryKey(key)));
 	}
 	@Override
 	public void onInitialize() {
