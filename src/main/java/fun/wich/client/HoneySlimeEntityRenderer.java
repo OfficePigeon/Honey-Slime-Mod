@@ -52,7 +52,7 @@ public class HoneySlimeEntityRenderer extends MobEntityRenderer<SlimeEntity, Sli
 			this.texture = texture;
 		}
 		@Override
-		public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int light, SlimeEntityRenderState state, float f, float g) {
+		public void render(MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, int light, SlimeEntityRenderState state, float headYaw, float headPitch) {
 			boolean bl = state.hasOutline() && state.invisible;
 			if (!state.invisible || bl) {
 				orderedRenderCommandQueue.getBatchingQueue(1).submitModel(this.model, state, matrixStack,
