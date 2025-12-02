@@ -46,23 +46,21 @@ public class HoneySlimesMod implements ModInitializer {
 					.eyeHeight(0.325F)
 					.spawnBoxScale(4.0F)
 					.maxTrackingRange(10)
-					.notAllowedInPeaceful()
 	);
 	public static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> type) {
-		RegistryKey<EntityType<?>> key = RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MOD_ID, name));
-		return Registry.register(Registries.ENTITY_TYPE, key, type.build(key));
+		Identifier id = Identifier.of(MOD_ID, name);
+		return Registry.register(Registries.ENTITY_TYPE, id, type.build(id.toString()));
 	}
-	public static final Block HONEY_CLUMP_BLOCK = register("honey_clump_block", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN).instrument(NoteBlockInstrument.BASEDRUM));
-	public static final Block CRYSTALLIZED_HONEY_BRICKS = register("crystallized_honey_bricks", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.RESIN_BRICKS).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5f, 6));
+	public static final Block HONEY_CLUMP_BLOCK = register("honey_clump_block", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.HONEY).instrument(NoteBlockInstrument.BASEDRUM));
+	public static final Block CRYSTALLIZED_HONEY_BRICKS = register("crystallized_honey_bricks", Block::new, Block.Settings.create().mapColor(MapColor.ORANGE).sounds(BlockSoundGroup.CORAL).instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.5f, 6));
 	public static final Block CRYSTALLIZED_HONEY_BRICK_STAIRS = register("crystallized_honey_brick_stairs", settings -> new StairsBlock(CRYSTALLIZED_HONEY_BRICKS.getDefaultState(), settings), Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static final Block CRYSTALLIZED_HONEY_BRICK_SLAB = register("crystallized_honey_brick_slab", SlabBlock::new, Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static final Block CRYSTALLIZED_HONEY_BRICK_WALL = register("crystallized_honey_brick_wall", WallBlock::new, Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static final Block CHISELED_CRYSTALLIZED_HONEY_BRICKS = register("chiseled_crystallized_honey_bricks", Block::new, Block.Settings.copy(CRYSTALLIZED_HONEY_BRICKS));
 	public static Block register(String name, Function<Block.Settings, Block> blockFactory, Block.Settings settings) {
-		RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name));
-		return Registry.register(Registries.BLOCK, key, blockFactory.apply(settings.registryKey(key)));
+		return Registry.register(Registries.BLOCK, RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name)), blockFactory.apply(settings));
 	}
-	public static final Item HONEY_SLIME_SPAWN_EGG = register("honey_slime_spawn_egg", SpawnEggItem::new, new Item.Settings().spawnEgg(HONEY_SLIME));
+	public static final Item HONEY_SLIME_SPAWN_EGG = register("honey_slime_spawn_egg", settings -> new SpawnEggItem(HONEY_SLIME, 0xffffff, 0xffffff, settings), new Item.Settings());
 	public static final Item HONEY_CLUMP = register("honey_clump", Item::new, new Item.Settings());
 	public static final Item HONEY_CLUMP_BLOCK_ITEM = register("honey_clump_block", settings -> new BlockItem(HONEY_CLUMP_BLOCK, settings), new Item.Settings());
 	public static final Item CRYSTALLIZED_HONEY_BRICK = register("crystallized_honey_brick", Item::new, new Item.Settings());
@@ -72,8 +70,7 @@ public class HoneySlimesMod implements ModInitializer {
 	public static final Item CRYSTALLIZED_HONEY_BRICK_WALL_ITEM = register("crystallized_honey_brick_wall", settings -> new BlockItem(CRYSTALLIZED_HONEY_BRICK_WALL, settings), new Item.Settings());
 	public static final Item CHISELED_CRYSTALLIZED_HONEY_BRICKS_ITEM = register("chiseled_crystallized_honey_bricks", settings -> new BlockItem(CHISELED_CRYSTALLIZED_HONEY_BRICKS, settings), new Item.Settings());
 	public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
-		RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
-		return Registry.register(Registries.ITEM, key, itemFactory.apply(settings.registryKey(key)));
+		return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name)), itemFactory.apply(settings));
 	}
 	@Override
 	public void onInitialize() {
