@@ -3,8 +3,8 @@
   "package": "fun.wich.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-	"ParrotEntityMixin",
-	"SlimeEntityMixin"
+	"HoneySlimes_ParrotEntityMixin",
+	"HoneySlimes_SlimeEntityMixin"
   ],
   "injectors": {
 	"defaultRequire": 1

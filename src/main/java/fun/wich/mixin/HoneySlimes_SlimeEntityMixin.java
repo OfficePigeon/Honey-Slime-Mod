@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(SlimeEntity.class)
-public class SlimeEntityMixin {
+public class HoneySlimes_SlimeEntityMixin {
 	@Inject(method="damage", at=@At(value="INVOKE", target="Lnet/minecraft/enchantment/EnchantmentHelper;onTargetDamaged(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/damage/DamageSource;)V"))
 	private void Mixin_HoneySlimeHealPoisonOnHit(LivingEntity target, CallbackInfo ci) {
 		if ((Object)this instanceof HoneySlimeEntity) target.removeStatusEffect(StatusEffects.POISON);
