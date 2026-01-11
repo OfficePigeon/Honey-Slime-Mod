@@ -1,0 +1,24 @@
+{
+  "entity.wich.honey_slime": "Медовик",
+  "item.wich.honey_slime_spawn_egg": "Яйце виклику медовика",
+  
+  "item.wich.honey_clump": "Медовий згусток",
+  "item.wich.honey_clump_block": "Блок медових згустків",
+  "block.wich.honey_clump_block": "Блок медових згустків",
+  "item.wich.crystallized_honey_brick": "Кристалізована медова цеглина",
+  "block.wich.crystallized_honey_brick": "Кристалізована медова цеглина",
+  "item.wich.crystallized_honey_bricks": "Кристалізована медова цегла",
+  "block.wich.crystallized_honey_bricks": "Кристалізована медова цегла",
+  "item.wich.crystallized_honey_brick_stairs": "Сходи з кристалізованої медової цегли",
+  "block.wich.crystallized_honey_brick_stairs": "Сходи з кристалізованої медової цегли",
+  "item.wich.crystallized_honey_brick_slab": "Плита з кристалізованої медової цегли",
+  "block.wich.crystallized_honey_brick_slab": "Плита з кристалізованої медової цегли",
+  "item.wich.crystallized_honey_brick_wall": "Стіна з кристалізованої медової цегли",
+  "block.wich.crystallized_honey_brick_wall": "Стіна з кристалізованої медової цегли",
+  "item.wich.chiseled_crystallized_honey_bricks": "Різьблена кристалізована медова цегла",
+  "block.wich.chiseled_crystallized_honey_bricks": "Різьблена кристалізована медова цегла",
+  
+  "subtitles.entity.parrot.imitate.honey_slime": "Папуга хлюпає",
+  
+  "modmenu.descriptionTranslation.wich_honey-slimes": "Додає нового моба і блоки — медовика і кристалізований мед."
+}
